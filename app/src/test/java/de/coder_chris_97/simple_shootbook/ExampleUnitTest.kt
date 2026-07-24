@@ -1,4 +1,4 @@
-package de.CoderChris97.simple_shootbook
+package de.coder_chris_97.simple_shootbook
 
 import org.junit.Test
 

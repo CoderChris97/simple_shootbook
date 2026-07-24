@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">simple_shootbook</string>
+    <string name="app_name">Schießbuch</string>
+
+    <string name="fragment_name_logs">Schießbuch</string>
+    <string name="fragment_name_weapons">Waffen</string>
+    <string name="fragment_name_ranges">Schießstände</string>
+    <string name="fragment_name_about">Über</string>
 </resources>

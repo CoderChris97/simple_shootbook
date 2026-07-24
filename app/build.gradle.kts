@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "de.CoderChris97.simple_shootbook"
+    namespace = "de.coder_chris_97.simple_shootbook"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -11,16 +11,24 @@ android {
     }
 
     defaultConfig {
-        applicationId = "de.CoderChris97.simple_shootbook"
+        applicationId = "de.coder_chris_97.simple_shootbook"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
-        versionName = "1.0"
+        versionName = "0.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+    }
+
     buildTypes {
+        debug {
+            isDebuggable = true
+        }
         release {
             optimization {
                 enable = false
@@ -31,12 +39,20 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+    base.archivesName = "${android.defaultConfig.applicationId}_v${android.defaultConfig.versionName}_${android.defaultConfig.versionCode}"
 }
 
 dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
+
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+
+    implementation(libs.timber)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)

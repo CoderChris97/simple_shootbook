@@ -1,4 +1,4 @@
-package de.CoderChris97.simple_shootbook
+package de.coder_chris_97.simple_shootbook
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
