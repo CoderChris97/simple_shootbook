@@ -1,11 +1,11 @@
-package de.coder_chris_97.simple_shootbook.ui
+package de.coderchris97.simpleshootbook.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import de.coder_chris_97.simple_shootbook.databinding.FragmentAboutBinding
+import de.coderchris97.simpleshootbook.databinding.FragmentAboutBinding
 
 class AboutFragment: Fragment() {
     private var _binding: FragmentAboutBinding? = null

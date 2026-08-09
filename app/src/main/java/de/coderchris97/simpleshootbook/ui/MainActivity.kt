@@ -1,4 +1,4 @@
-package de.coder_chris_97.simple_shootbook.ui
+package de.coderchris97.simpleshootbook.ui
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import de.coder_chris_97.simple_shootbook.BuildConfig
-import de.coder_chris_97.simple_shootbook.R
-import de.coder_chris_97.simple_shootbook.databinding.ActivityMainBinding
+import de.coderchris97.simpleshootbook.BuildConfig
+import de.coderchris97.simpleshootbook.R
+import de.coderchris97.simpleshootbook.databinding.ActivityMainBinding
 import timber.log.Timber
 
 class MainActivity: AppCompatActivity() {

@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "de.coder_chris_97.simple_shootbook"
+    namespace = "de.coderchris97.simpleshootbook"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "de.coder_chris_97.simple_shootbook"
+        applicationId = "de.coderchris97.simpleshootbook"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

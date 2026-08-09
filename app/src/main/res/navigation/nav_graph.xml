@@ -10,25 +10,25 @@
 
     <fragment
         android:id="@+id/nav_logs"
-        android:name="de.coder_chris_97.simple_shootbook.ui.LogsFragment"
+        android:name="de.coderchris97.simpleshootbook.ui.LogsFragment"
         android:label="@string/fragment_name_logs"
         tools:layout="@layout/fragment_log"/>
 
     <fragment
         android:id="@+id/nav_weapons"
-        android:name="de.coder_chris_97.simple_shootbook.ui.WeaponsFragment"
+        android:name="de.coderchris97.simpleshootbook.ui.WeaponsFragment"
         android:label="@string/fragment_name_weapons"
         tools1:layout="@layout/fragment_weapons"/>
 
     <fragment
         android:id="@+id/nav_ranges"
-        android:name="de.coder_chris_97.simple_shootbook.ui.RangesFragment"
+        android:name="de.coderchris97.simpleshootbook.ui.RangesFragment"
         android:label="@string/fragment_name_ranges"
         tools2:layout="@layout/fragment_ranges"/>
 
     <fragment
         android:id="@+id/nav_about"
-        android:name="de.coder_chris_97.simple_shootbook.ui.AboutFragment"
+        android:name="de.coderchris97.simpleshootbook.ui.AboutFragment"
         android:label="@string/fragment_name_about"
         tools3:layout="@layout/fragment_about"/>
 </navigation>
