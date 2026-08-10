@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
@@ -29,6 +32,10 @@ class MainActivity: AppCompatActivity() {
         if (BuildConfig.DEBUG)
             Timber.plant(Timber.DebugTree())
 
+        setupInsets()
+
+        setSupportActionBar(binding.toolbar)
+
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
@@ -51,5 +58,20 @@ class MainActivity: AppCompatActivity() {
             return true
 
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun setupInsets() {
+        ViewCompat.setOnApplyWindowInsetsListener(binding.linearLayout) { _, insets ->
+            val barInsets = insets.getInsets(
+                WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout()
+            )
+
+            binding.toolbar.updatePadding(top = barInsets.top)
+            binding.navHostFragment.updatePadding(barInsets.left, 0, barInsets.right, barInsets.bottom)
+
+            insets
+        }
+
+        ViewCompat.requestApplyInsets(binding.linearLayout)
     }
 }
