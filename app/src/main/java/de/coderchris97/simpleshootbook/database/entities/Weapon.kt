@@ -9,7 +9,7 @@ import de.coderchris97.simpleshootbook.database.enums.WeaponType
 @Entity("weapons")
 data class Weapon(
     @PrimaryKey(true)
-    @ColumnInfo("weapon_id") val weaponId: Int,
+    @ColumnInfo("weapon_id") val weaponId: Long,
     @ColumnInfo("serial_number") val serialNumber: String,
     val manufacturer: String,
     val model: String,

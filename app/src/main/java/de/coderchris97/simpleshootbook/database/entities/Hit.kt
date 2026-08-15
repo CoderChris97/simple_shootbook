@@ -18,8 +18,8 @@ import androidx.room3.PrimaryKey
 )
 data class Hit(
     @PrimaryKey(true)
-    @ColumnInfo("hit_id") val hitId: Int,
-    @ColumnInfo("shooting_log_entry_id") val shootingLogEntryId: Int,
+    @ColumnInfo("hit_id") val hitId: Long,
+    @ColumnInfo("shooting_log_entry_id") val shootingLogEntryId: Long,
     @ColumnInfo("hit_number") val hitNumber: Int,
     val rings: Double
 )

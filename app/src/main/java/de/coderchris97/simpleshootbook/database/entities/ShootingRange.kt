@@ -8,7 +8,7 @@ import androidx.room3.PrimaryKey
 @Entity("shooting_ranges")
 data class ShootingRange(
     @PrimaryKey(true)
-    @ColumnInfo("shooting_range_id") val shootingRangeId: Int,
+    @ColumnInfo("shooting_range_id") val shootingRangeId: Long,
     val name: String,
     @Embedded val address: Address,
     val comment: String

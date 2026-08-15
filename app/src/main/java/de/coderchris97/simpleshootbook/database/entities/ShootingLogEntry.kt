@@ -25,10 +25,10 @@ import de.coderchris97.simpleshootbook.database.enums.Discipline
 )
 data class ShootingLogEntry(
     @PrimaryKey(true)
-    @ColumnInfo("shooting_log_entry_id") val shootingLogEntryId: Int,
+    @ColumnInfo("shooting_log_entry_id") val shootingLogEntryId: Long,
     val timestamp: Long,
-    @ColumnInfo("weapon_id") val weaponId: Int,
+    @ColumnInfo("weapon_id") val weaponId: Long,
     val discipline: Discipline,
-    @ColumnInfo("shooting_range_id") val shootingRangeId: Int,
+    @ColumnInfo("shooting_range_id") val shootingRangeId: Long,
     val comment: String
 )

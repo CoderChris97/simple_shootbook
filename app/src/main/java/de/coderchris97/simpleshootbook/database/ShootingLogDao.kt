@@ -50,7 +50,7 @@ interface ShootingLogDao {
     fun getEntries(): Flow<List<EntryWithData>>
 
     @Query("Select * FROM shooting_log_entries WHERE shooting_log_entry_id=:id")
-    fun getEntryById(id: Int): ShootingLogEntry?
+    fun getEntryById(id: Long): ShootingLogEntry?
 
     @Query("SELECT * FROM weapons")
     fun getWeapons(): Flow<List<Weapon>>
