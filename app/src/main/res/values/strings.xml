@@ -1,8 +1,136 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="de">
     <string name="app_name">Schießbuch</string>
 
     <string name="fragment_name_logs">Schießbuch</string>
     <string name="fragment_name_weapons">Waffen</string>
+    <string name="fragment_name_weapon_details">Waffen-Details</string>
+    <string name="fragment_name_weapon_edit">Waffe bearbeiten</string>
     <string name="fragment_name_ranges">Schießstände</string>
     <string name="fragment_name_about">Über</string>
+
+    <!-- Common -->
+    <string name="comment_label">Bemerkung</string>
+    <string name="abort">Abbrechen</string>
+    <string name="confirm">Bestätigen</string>
+    <string name="apply">Anwenden</string>
+    <string name="toast_store_item_successful">Speichern erfolgreich</string>
+    <string name="toast_store_item_unsuccessful">Speichern fehlgeschlagen</string>
+    <string name="dialog_confirm_deletion_title">%s löschen?</string>
+    <string name="dialog_confirm_deletion_message">Sind Sie sicher, dass Sie %s löschen wollen? Diese Aktion kann nicht rückgängig gemacht werden.</string>
+    <string name="dialog_confirm_deletion_cascade_message">%1$s wird noch in %2$d Einträgen verwendet. Diese Einträge werden ebenfalls gelöscht. Sind Sie sicher, dass Sie %1$s und %2$d Einträge löschen wollen. Diese Aktion kann nicht rückgängig gemacht werden.</string>
+    <string name="action_edit_title">Bearbeiten</string>
+    <string name="action_delete_title">Löschen</string>
+
+    <!-- Weapon -->
+    <plurals name="number_of_weapons">
+        <item quantity="one">%d Waffe gefunden</item>
+        <item quantity="other">%d Waffen gefunden</item>
+    </plurals>
+    <string name="add_weapon_content_description">Eine Waffe hinzufügen</string>
+    <string name="name_label">Name</string>
+    <string name="manufacturer_label">Hersteller</string>
+    <string name="model_label">Modell</string>
+    <string name="serial_number_label">Seriennummer</string>
+    <string name="weapon_type_label">Waffenkategorie</string>
+    <string name="calibre_label">Kaliber</string>
+    <string name="purchase_date_label">Kaufdatum</string>
+    <string name="select_purchase_date_dialog_title">Kaufdatum auswählen</string>
+    <string name="weapon_item_manufacturer_model">%s (%s)</string>
+    <string name="error_display_name_missing">Bitte geben Sie einen Namen an</string>
+    <string name="error_weapon_type_missing">Bitte geben Sie einen Waffentyp an</string>
+    <string name="error_calibre_missing">Bitte geben Sie ein Kaliber an</string>
+
+    <!-- Enum display name -->
+    <!-- Weapon Type -->
+    <string name="handgun_display_name">Kurzwaffe</string>
+    <string name="rifle_display_name">Langwaffe</string>
+    <string-array name="weapon_type_display_name">
+        <item name="handgun_display_name">@string/handgun_display_name</item>
+        <item name="rifle_display_name">@string/rifle_display_name</item>
+    </string-array>
+    <string-array name="weapon_type_display_name_short">
+        <item name="handgun_display_name_short">KW</item>
+        <item name="rifle_display_name_short">LW</item>
+    </string-array>
+
+    <!-- Calibre -->
+    <string-array name="calibres">
+        <item name="CALIBRE_4_5_MM_DIABOLO">4,5mm Diabolo</item>
+        <item name="CALIBRE_22_LR">.22 lr</item>
+        <item name="CALIBRE_9_MM_LUGER">9mm Luger</item>
+        <item name="CALIBRE_357_MAGNUM">.357 Magnum</item>
+        <item name="CALIBRE_44_MAGNUM">.44 Magnum</item>
+        <item name="CALIBRE_45_ACP">.45 ACP</item>
+    </string-array>
+
+    <!-- Disciplines -->
+    <string-array name="disciplines">
+        <item name="DISCIPLINE_1_10"></item>
+        <item name="DISCIPLINE_1_11"></item>
+        <item name="DISCIPLINE_1_20"></item>
+        <item name="DISCIPLINE_1_30"></item>
+        <item name="DISCIPLINE_1_31"></item>
+        <item name="DISCIPLINE_1_35"></item>
+        <item name="DISCIPLINE_1_36"></item>
+        <item name="DISCIPLINE_1_37"></item>
+        <item name="DISCIPLINE_1_38"></item>
+        <item name="DISCIPLINE_1_40"></item>
+        <item name="DISCIPLINE_1_41"></item>
+        <item name="DISCIPLINE_1_42"></item>
+        <item name="DISCIPLINE_1_43"></item>
+        <item name="DISCIPLINE_1_44"></item>
+        <item name="DISCIPLINE_1_45"></item>
+        <item name="DISCIPLINE_1_50"></item>
+        <item name="DISCIPLINE_1_51"></item>
+        <item name="DISCIPLINE_1_52"></item>
+        <item name="DISCIPLINE_1_53"></item>
+        <item name="DISCIPLINE_1_54"></item>
+        <item name="DISCIPLINE_1_55"></item>
+        <item name="DISCIPLINE_1_56"></item>
+        <item name="DISCIPLINE_1_57"></item>
+        <item name="DISCIPLINE_1_58O"></item>
+        <item name="DISCIPLINE_1_58G"></item>
+        <item name="DISCIPLINE_1_59"></item>
+        <item name="DISCIPLINE_1_60"></item>
+        <item name="DISCIPLINE_1_70"></item>
+        <item name="DISCIPLINE_1_71"></item>
+        <item name="DISCIPLINE_1_72"></item>
+        <item name="DISCIPLINE_1_80"></item>
+        <item name="DISCIPLINE_1_85"></item>
+        <item name="DISCIPLINE_1_90"></item>
+        <item name="DISCIPLINE_1_91"></item>
+        <item name="DISCIPLINE_1_92"></item>
+        <item name="DISCIPLINE_1_95"></item>
+        <item name="DISCIPLINE_1_96"></item>
+        <item name="DISCIPLINE_1_97"></item>
+        <item name="DISCIPLINE_2_10"></item>
+        <item name="DISCIPLINE_2_11"></item>
+        <item name="DISCIPLINE_2_16"></item>
+        <item name="DISCIPLINE_2_17"></item>
+        <item name="DISCIPLINE_2_18"></item>
+        <item name="DISCIPLINE_2_20"></item>
+        <item name="DISCIPLINE_2_21"></item>
+        <item name="DISCIPLINE_2_30"></item>
+        <item name="DISCIPLINE_2_31"></item>
+        <item name="DISCIPLINE_2_40"></item>
+        <item name="DISCIPLINE_2_41"></item>
+        <item name="DISCIPLINE_2_42"></item>
+        <item name="DISCIPLINE_2_45"></item>
+        <item name="DISCIPLINE_2_51"></item>
+        <item name="DISCIPLINE_2_52"></item>
+        <item name="DISCIPLINE_2_53"></item>
+        <item name="DISCIPLINE_2_54"></item>
+        <item name="DISCIPLINE_2_55"></item>
+        <item name="DISCIPLINE_2_56"></item>
+        <item name="DISCIPLINE_2_57"></item>
+        <item name="DISCIPLINE_2_58"></item>
+        <item name="DISCIPLINE_2_59"></item>
+        <item name="DISCIPLINE_2_60"></item>
+        <item name="DISCIPLINE_3_10"></item>
+        <item name="DISCIPLINE_3_15"></item>
+        <item name="DISCIPLINE_3_20"></item>
+        <item name="DISCIPLINE_3_30"></item>
+        <item name="DISCIPLINE_3_35"></item>
+        <item name="DISCIPLINE_3_40"></item>
+    </string-array>
 </resources>

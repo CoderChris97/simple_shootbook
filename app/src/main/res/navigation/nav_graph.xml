@@ -25,7 +25,47 @@
             android:id="@+id/nav_weapons"
             android:name="de.coderchris97.simpleshootbook.ui.weapons.WeaponsFragment"
             android:label="@string/fragment_name_weapons"
-            tools1:layout="@layout/fragment_weapons" />
+            tools1:layout="@layout/fragment_weapons" >
+
+            <action
+                android:id="@+id/navigate_overview_to_details"
+                app:destination="@id/nav_weapon_details" />
+
+            <action
+                android:id="@+id/navigate_overview_to_edit"
+                app:destination="@id/nav_weapon_edit" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_weapon_details"
+            android:name="de.coderchris97.simpleshootbook.ui.weapons.WeaponDetailsFragment"
+            android:label="@string/fragment_name_weapon_details"
+            tools:layout="@layout/fragment_weapon_details" >
+
+            <argument
+                android:name="weaponId"
+                app:argType="long" />
+
+            <action
+                android:id="@+id/navigate_details_to_edit"
+                app:destination="@id/nav_weapon_edit"/>
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_weapon_edit"
+            android:name="de.coderchris97.simpleshootbook.ui.weapons.WeaponEditFragment"
+            android:label="@string/fragment_name_weapon_edit"
+            tools:layout="@layout/fragment_weapon_edit" >
+
+            <argument
+                android:name="weaponId"
+                app:argType="long"
+                android:defaultValue="-1L" />
+
+        </fragment>
+
     </navigation>
 
     <navigation android:id="@+id/nav_graph_ranges"

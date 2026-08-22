@@ -3,6 +3,7 @@ package de.coderchris97.simpleshootbook.database
 import androidx.room3.Dao
 import androidx.room3.Delete
 import androidx.room3.Insert
+import androidx.room3.OnConflictStrategy
 import androidx.room3.Query
 import androidx.room3.Transaction
 import de.coderchris97.simpleshootbook.database.entities.Hit
@@ -17,16 +18,16 @@ interface ShootingLogDao {
 
     // ===== Inserts =====
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertEntry(entry: ShootingLogEntry): Long
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertWeapon(weapon: Weapon): Long
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertShootingRange(shootingRange: ShootingRange): Long
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertHits(vararg hits: Hit)
 
     // ===== Deletes =====
@@ -52,8 +53,17 @@ interface ShootingLogDao {
     @Query("Select * FROM shooting_log_entries WHERE shooting_log_entry_id=:id")
     fun getEntryById(id: Long): ShootingLogEntry?
 
+    @Query("SELECT * FROM shooting_log_entries WHERE weapon_id=:weaponId")
+    fun getEntriesByWeaponId(weaponId: Long): List<ShootingLogEntry>
+
     @Query("SELECT * FROM weapons")
     fun getWeapons(): Flow<List<Weapon>>
+
+    @Query("SELECT * FROM weapons WHERE weapon_id=:id")
+    fun getWeapon(id: Long): Weapon?
+
+    @Query("SELECT * FROM weapons WHERE weapon_id=:id")
+    fun getWeaponAsFlow(id: Long): Flow<Weapon?>
 
     @Query("SELECT * FROM shooting_ranges")
     fun getShootingRanges(): Flow<List<ShootingRange>>

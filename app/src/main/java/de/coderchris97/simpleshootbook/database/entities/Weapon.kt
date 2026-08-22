@@ -10,9 +10,10 @@ import de.coderchris97.simpleshootbook.database.enums.WeaponType
 data class Weapon(
     @PrimaryKey(true)
     @ColumnInfo("weapon_id") val weaponId: Long,
-    @ColumnInfo("serial_number") val serialNumber: String,
+    val name: String,
     val manufacturer: String,
     val model: String,
+    @ColumnInfo("serial_number") val serialNumber: String,
     @ColumnInfo("weapon_type") val weaponType: WeaponType,
     val calibre: Calibre,
     @ColumnInfo("purchase_date") val purchaseDate: Long?,
