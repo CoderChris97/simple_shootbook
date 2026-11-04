@@ -75,7 +75,45 @@
             android:id="@+id/nav_ranges"
             android:name="de.coderchris97.simpleshootbook.ui.ranges.RangesFragment"
             android:label="@string/fragment_name_ranges"
-            tools2:layout="@layout/fragment_ranges" />
+            tools2:layout="@layout/fragment_ranges" >
+
+            <action
+                android:id="@+id/navigate_overview_to_details"
+                app:destination="@id/nav_range_details" />
+
+            <action
+                android:id="@+id/navigate_overview_to_edit"
+                app:destination="@id/nav_range_edit" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_range_details"
+            android:name="de.coderchris97.simpleshootbook.ui.ranges.RangeDetailsFragment"
+            android:label="@string/fragment_name_range_details"
+            tools:layout="@layout/fragment_range_details">
+
+            <argument
+                android:name="rangeId"
+                app:argType="long" />
+
+            <action
+                android:id="@+id/navigate_details_to_edit"
+                app:destination="@id/nav_range_edit" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_range_edit"
+            android:name="de.coderchris97.simpleshootbook.ui.ranges.RangeEditFragment"
+            android:label="@string/fragment_name_range_edit"
+            tools:layout="@layout/fragment_range_edit" >
+
+            <argument
+                android:name="rangeId"
+                app:argType="long"
+                android:defaultValue="-1L" />
+
+        </fragment>
     </navigation>
 
     <fragment

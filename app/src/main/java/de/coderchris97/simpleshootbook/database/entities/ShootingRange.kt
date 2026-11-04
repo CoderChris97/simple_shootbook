@@ -17,6 +17,6 @@ data class ShootingRange(
 data class Address (
     val street: String,
     @ColumnInfo("house_number") val houseNumber: String,
-    @ColumnInfo("postal_code") val postalCode: Int,
+    @ColumnInfo("postal_code") val postalCode: Int?,
     val city: String
 )

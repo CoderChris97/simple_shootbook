@@ -6,6 +6,8 @@
     <string name="fragment_name_weapon_details">Waffen-Details</string>
     <string name="fragment_name_weapon_edit">Waffe bearbeiten</string>
     <string name="fragment_name_ranges">Schießstände</string>
+    <string name="fragment_name_range_details">Schießstand-Details</string>
+    <string name="fragment_name_range_edit">Schießstand bearbeiten</string>
     <string name="fragment_name_about">Über</string>
 
     <!-- Common -->
@@ -39,6 +41,17 @@
     <string name="error_display_name_missing">Bitte geben Sie einen Namen an</string>
     <string name="error_weapon_type_missing">Bitte geben Sie einen Waffentyp an</string>
     <string name="error_calibre_missing">Bitte geben Sie ein Kaliber an</string>
+
+    <!-- Shooting range -->
+    <plurals name="number_of_shooting_ranges">
+        <item quantity="one">%d Schießstand gefunden</item>
+        <item quantity="other">%d Schießstände gefunden</item>
+    </plurals>
+    <string name="add_shooting_range_content_description">Einen Schießstand hinzufügen</string>
+    <string name="street_label">Straße</string>
+    <string name="housenumber_label">Hausnummer</string>
+    <string name="postal_code_label">Postleitzahl</string>
+    <string name="city_label">Stadt</string>
 
     <!-- Enum display name -->
     <!-- Weapon Type -->

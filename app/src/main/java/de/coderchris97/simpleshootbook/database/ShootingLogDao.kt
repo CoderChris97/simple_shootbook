@@ -56,6 +56,9 @@ interface ShootingLogDao {
     @Query("SELECT * FROM shooting_log_entries WHERE weapon_id=:weaponId")
     fun getEntriesByWeaponId(weaponId: Long): List<ShootingLogEntry>
 
+    @Query("SELECT * FROM shooting_log_entries WHERE shooting_range_id=:shootingRangeId")
+    fun getEntriesByShootingRangeId(shootingRangeId: Long): List<ShootingLogEntry>
+
     @Query("SELECT * FROM weapons")
     fun getWeapons(): Flow<List<Weapon>>
 
@@ -67,4 +70,10 @@ interface ShootingLogDao {
 
     @Query("SELECT * FROM shooting_ranges")
     fun getShootingRanges(): Flow<List<ShootingRange>>
+
+    @Query("SELECT * FROM shooting_ranges WHERE shooting_range_id=:id")
+    fun getShootingRange(id: Long): ShootingRange?
+
+    @Query("SELECT * FROM shooting_ranges WHERE shooting_range_id=:id")
+    fun getShootingRangeAsFlow(id: Long): Flow<ShootingRange?>
 }
